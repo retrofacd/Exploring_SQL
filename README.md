@@ -1,14 +1,17 @@
 1a. Display the first and last names of all actors from the table actor.
+
 USE sakila;
 SHOW TABLES;
 SELECT first_name,last_name FROM actor;
 
 1b. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name.
+
 “The CONCAT() function concatenates two or more expressions together.”
 
 SELECT UPPER(CONCAT(first_name,' ',last_name)) as ACTOR_NAME FROM actor;
 
 2a. You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, "Joe." What is one query would you use to obtain this information?
+
 SELECT first_name, last_name, actor_id FROM actor
 WHERE first_name like "Joe";
 
